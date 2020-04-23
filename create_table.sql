@@ -28,7 +28,7 @@ CREATE TABLE ejections(
     CORRECT VARCHAR(1),
     team carchar(3),
     is_home_team boolean,
-    primary key (des)
+    PRIMARY KEY (des)
 );
 LOAD DATA LOCAL INFILE './ejections.csv'
 INTO TABLE ejections
@@ -86,7 +86,7 @@ CREATE TABLE pitches(
     on_1b boolean,
     on_2b boolean,
     on_3b boolean,
-    primary key (ab_id, pitch_num)
+    PRIMARY KEY (ab_id, pitch_num)
 );
 
 LOAD DATA LOCAL INFILE './pitches.csv'
@@ -100,7 +100,7 @@ CREATE TABLE player_names(
     id VARCHAR(6) NOT NULL,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    primary key(id)
+    PRIMARY KEY(id)
 );
 
 LOAD DATA LOCAL INFILE './player_names.csv'
@@ -109,5 +109,3 @@ FIELDS TERMINATED by ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
-
-
